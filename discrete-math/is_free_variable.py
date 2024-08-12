@@ -16,7 +16,7 @@ def is_free_variable(func_vector: list[bool], pos: int) -> bool:
     elif pos >= size:
         return "Out of range of args"
 
-    tmp_args = list(map(''.join, product(['0', '1'], repeat=int(size) - 1)))[::-1]     
+    tmp_args = list(map(''.join, product(['0', '1'], repeat=int(size) - 1)))   
 
     for tmp_arg in tmp_args:
         first_args = tmp_arg[:pos] + '0' + tmp_arg[pos:] #01010_0_0101 ...
