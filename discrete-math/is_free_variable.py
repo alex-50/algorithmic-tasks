@@ -22,8 +22,7 @@ def is_free_variable(func_vector: list[bool], pos: int) -> bool:
         first_args = tmp_arg[:pos] + '0' + tmp_arg[pos:] #01010_0_0101 ...
         second_args = tmp_arg[:pos] + '1' + tmp_arg[pos:] #01010_1_0101 ...
 
-        n1 = int(first_args, 2)
-        n2 = int(second_args, 2)
+        n1, n2 = map(lambda x: int(x, 2), [first_args, second_args])
 
         if func_vector[n1] != func_vector[n2]:
             return False
