@@ -28,7 +28,7 @@ print(generate_bool_func_vector(disjunction))
 print(generate_bool_func_vector(const_0))
 print(generate_bool_func_vector(const_1))
 
-#ouput
+# ouput
 # [False, False, False, True]
 # [False, True, True, True]
 # [False, False]
