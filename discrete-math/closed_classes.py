@@ -35,7 +35,7 @@ class ClosedClasses:
 
         return True
 
-    def is_M(self):
+    def is_M(self) -> bool:
         all_args = [
             (len(bin(len(self.func_vector) - 1)) - len(bin(i))) * "0" + bin(i)[2:]
             for i in range(len(self.func_vector))
@@ -68,9 +68,9 @@ class ClosedClasses:
 # input
 
 functions = {
-    "Pierces_arrow": [1, 0, 0, 0],
+    "Pierces arrow": [1, 0, 0, 0],
     "conjunction": [0, 0, 0, 1],
-    "Schaeffers_stroke": [1, 1, 1, 0],
+    "Schaeffers stroke": [1, 1, 1, 0],
     "disjunction": [0, 1, 1, 1],
 }
 
@@ -81,7 +81,7 @@ for func in functions:
     )
 
 # output
-# "Pierces_arrow" - the criteria of the Post: True
+# "Pierces arrow" - the criteria of the Post: True
 # "conjunction" - the criteria of the Post: False
-# "Schaeffers_stroke" - the criteria of the Post: True
+# "Schaeffers stroke" - the criteria of the Post: True
 # "disjunction" - the criteria of the Post: False
