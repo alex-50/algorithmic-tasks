@@ -4,7 +4,7 @@ a = 12
 b = 18
 
 
-def gcd(a, b):
+def gcd(a: int, b: int) -> int:
     if b == 0:
         return a
     else:
