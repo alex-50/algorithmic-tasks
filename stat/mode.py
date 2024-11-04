@@ -9,13 +9,7 @@ data = [randint(1, 5) for _ in range(100)]
 
 
 def mode(array: list[int | float]) -> list[int | float]:
-    counter = dict(
-        sorted(
-            {value: array.count(value) for value in set(array)}.items(),
-            key=lambda item: item[1],
-            reverse=True,
-        )
-    )
+    counter = {value: array.count(value) for value in set(array)}
     max_repeat = max(counter.values())
     return list(
         map(
