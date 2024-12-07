@@ -5,7 +5,7 @@ class ClosedClasses:
     def __init__(self, func_vector: list[bool]) -> None:
 
         if not log2(len(func_vector)).is_integer():
-            raise "Bad argument"
+            raise ValueError("Bad argument")
 
         self.func_vector = func_vector
 

@@ -4,7 +4,7 @@ from math import log2
 def generate_CDNF_expression(func_vector: list[bool]) -> str:
 
     if not log2(len(func_vector)).is_integer():
-        raise "Bad argument"
+        raise ValueError("Bad argument")
 
     if all(func_vector):
         return "1"
